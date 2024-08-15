@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100vw;
+    height: 5rem;
+    background-color: black;
+    text-align: center;
+}
+
+header img {
+    height: 5rem;
+    width: 15rem;
+}
+
+.main-content {
+    /* height: 42rem; */
+    width: 100%;
+    height: 100vh;
+    background-image: url("./brent-ninaber-mLnG4BkTz54-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(50%);
+}
+
+.main-content p {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 10rem;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.Drum-kit {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    color: #fff;
+    width: 100%;
+    margin: 2rem;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.key {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    border: 2px solid #333;
+    border-radius: 0.4rem;
+    padding: 0.6rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 8rem;
+}
+
+.key:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+kbd {
+    display: block;
+    font-size: 2rem;
+}
+
+.sound {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+}
+.footer {
+    background-color: black;
+    width: 100%;
+    height: 5rem;
+    color: #fff;
+    border-top:0.1px solid #373636;
+}
+
+.footer p {
+    text-align: center;
+    margin-top: 1.7rem;
+   font-size: 1rem;
+
+}
+/* Responsive Design */
+@media(max-width:768px) {
+    html {
+        font-size: 70%;
+    }
+
+    .Drum-kit {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 3rem;
+        margin:10rem;
+        margin-left: 1rem;
+    }
+
+    .main-content {
+        height: 70rem;
+        /* height: auto; */
+        width: auto;
+    }
+    .main-content p{
+        margin-top:15rem;
+    }
+}
+
+
+@media(max-width:380px) {
+    html {
+        font-size: 50%;
+    }
+
+    .Drum-kit {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        margin:15rem;
+        margin-left: 2rem;
+    }
+
+    .main-content {
+        height: 72rem;
+        /* height: auto; */
+        width: auto;
+    }
+    .main-content p{
+        margin-top:15rem;
+    }
+}
